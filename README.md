@@ -6,6 +6,8 @@ This is the repository of the MTengine project -- machine translation project ba
 
 URL of the project: http://mtengine.semanticanalyzer.info
 
+VK.com group: http://vk.com/mtengine
+
 
 The project is supported by and uses the technology of the [SemanticAnalyzer](https://github.com/semanticanalyzer) company.
 
