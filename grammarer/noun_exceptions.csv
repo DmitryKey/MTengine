@@ -6,6 +6,7 @@ alumnus,alumni
 antenna,antennas
 appendix,appendices
 athletics,athletics
+attorney,attorneys
 axis,axes
 bacillus,bacilli
 baggage ,baggage 
@@ -20,15 +21,18 @@ chamois,chamois
 chief,chiefs
 child,children
 clothing ,clothing 
+cod,cod
 corpus,corpora
-crisis,crises
+corps,corps
 crisis,crises
 criterion,criteria
 cuff,cuffs
+cul-de-sac,culs-de-sac
 curriculum,curricula
 datum,data
 deer,deer
 diagnosis,diagnoses
+die,dice
 dozen,dozen
 dwarf,dwarves
 economics,economics
@@ -44,10 +48,13 @@ fungus,fungi
 furniture ,furniture 
 gallows,gallows
 goose,geese
+genius,genii
 genus,genera
+graffito,gaffiti
 grouse,grouse
 hair,hair
 half,halves
+halibut,halibut
 headquarters,headquarters
 hippopotamus,hippopotami
 hoof,hooves
@@ -58,7 +65,7 @@ kerchief,kerchieves
 kidney,kidneys
 knife,knives
 leaf,leaves
-lice,lice
+louse,lice
 linguistics,linguistics
 life,lives
 loaf,loaves
@@ -66,11 +73,13 @@ luggage ,luggage
 mathematics,mathematics
 means ,means 
 measles,measles
+medium,media
 memorandum,memoranda
 memo,memos
 man,men
 mouse,mice
 millennium,millennia
+mongoose,mongooses
 moose,moose
 nucleus,nuclei
 oasis,oases
@@ -81,8 +90,10 @@ person,people
 phenomenon,phenomena
 pince-nez,pince-nez
 plaintiff,plaintiffs
+polihedron,polyhedra
 politics,politics
 potato,potatoes
+quantum,quanta
 radius,radii
 reef,reefs
 referendum,referenda
@@ -98,6 +109,7 @@ sheriff,sheriffs
 stadiums,stadiums
 stereo,stereos
 stimulus,stimuli
+stratum,strata
 succubus,succubi
 swine,swine
 syllabus,syllabi
