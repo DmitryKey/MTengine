@@ -7,7 +7,7 @@ for row in reader:
     key = row[0]
     noun_exceptions[key] = row[1]
 
-no_plural =  ['money','news']
+no_plural =  ['money','news', 'advice']
 
 def plural(noun):
     if noun in no_plural:
@@ -24,5 +24,5 @@ def plural(noun):
         form = noun + 's'
     return form
 
-print plural("bacterium")
+
 
