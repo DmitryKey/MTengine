@@ -37,54 +37,6 @@ def tense_choice(tense, case):
         return verb_form.inf(case)
 
 
-def start(verb, tense, person):
-
-    if tense == '':
-        tense = 'inf'
-    else:
-        pass
-    case = verb_form(verb, tense, person)
-
-    print tense_choice(tense, case)
-
-    print "\nLet's test some more"
-
-    restart (verb, tense, person)
-
-
-def restart(verb, tense, person):
-    v = verb_input()
-    if v == '':
-        pass
-    else:
-        verb = v
-
-    t = tense_input()
-    if t == '':
-        pass
-    else:
-        tense = t
-
-    p = person_input()
-    if p == '':
-        pass
-    else:
-        person = p
-
-    if tense == '':
-        tense = 'inf'
-    else:
-        pass
-
-    case = verb_form(verb, tense, person)
-
-
-    print tense_choice(tense, case)
-
-    print "\nLet's test some more"
-
-    restart (verb, tense, person)
-
 print '''Welcome to the test interface for verb form generator!
 The interface will ask you to provide verb, and fill tense and person, to which it would bend.
 It's very simple and has no spell check, so be careful not to make mistakes.
@@ -97,12 +49,38 @@ You need to fill in at least verb and tense for the first time.
 If later some input is empty, the interface will use your previous choices. \nThe idea is to give you possibility to test different forms for the same verb or the same person without extra typing
 
 '''
-
+#main
 
 verb = verb_input()
 tense = tense_input()
 person = person_input()
 
-start(verb, tense, person)
+case = verb_form(verb, tense, person)
+
+print tense_choice(tense, case)
+
+while True:
+    v = verb_input()
+    if v != '':
+        verb = v
+
+    t = tense_input()
+    if t != '':
+        tense = t
+
+    p = person_input()
+    if p != '':
+        person = p
+
+    if tense == '':
+        tense = 'inf'
+    else:
+        pass
+
+    case = verb_form(verb, tense, person)
+
+    print tense_choice(tense, case)
+
+    print "\nLet's test some more"
 
 
