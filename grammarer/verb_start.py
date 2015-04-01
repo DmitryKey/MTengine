@@ -19,8 +19,8 @@ def person_input():
 def tense_choice(tense, case):
     if tense == 'present simple':
         return verb_form.present_simple(case)
-    elif tense == 'pp1':
-        return verb_form.pp1(case)
+    elif tense == 'gerund':
+        return verb_form.gerund(case)
     elif tense == 'pp2':
         return verb_form.pp2(case)
     elif tense == 'present perfect':
@@ -33,6 +33,10 @@ def tense_choice(tense, case):
         return verb_form.present_continuous(case)
     elif tense == 'past perfect':
         return verb_form.past_perfect(case)
+    elif tense == 'future continuous':
+        return verb_form.future_continuous(case)
+    elif tense == 'past continuous':
+        return verb_form.past_continuous(case)
     else:
         return verb_form.inf(case)
 
@@ -42,7 +46,7 @@ The interface will ask you to provide verb, and fill tense and person, to which 
 It's very simple and has no spell check, so be careful not to make mistakes.
 
 'verb' is an open category, so you can print any verb you like.
-'tense' can be present simple, present perfect, present continuous, past simple, past perfect, and also pp1 (participle 1) and pp2 (participle 2)
+'tense' can be present simple, present perfect, present continuous, past continuous, future continuous, past simple, past perfect, and also gerund and pp2 (participle 2)
 'person' can be can be 'I','you','she' (we try to be correct), 'we' or 'they'.
 
 You need to fill in at least verb and tense for the first time.

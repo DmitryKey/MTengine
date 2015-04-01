@@ -41,15 +41,22 @@ class verb_form(object):
         else:
             return 'are'
 
-#fbe(self) is conjugation of the verb 'to be' to use it later as auxiliary verb(future)
+    #fbe(self) is conjugation of the verb 'to be' to use it later as auxiliary verb(future)
     def fbe(self):
         if self.person in ['I', 'we']:
             return 'shall'
         else:
             return 'will'
 
-    #pp1 is 'participle 1' (active participle)
-    def pp1(self):
+    #pbe(self) is conjugation of the verb 'to be' to use it later as auxiliary verb(past)
+    def pbe(self):
+        if self.person == 'she':
+            return 'was'
+        else:
+            return 'were'
+
+
+    def gerund(self):
         if self.verb == 'be':
             return 'being'
         elif self.verb[-1] == 'e':
@@ -113,7 +120,7 @@ class verb_form(object):
             pass
 
     def present_continuous(self):
-        return self.nbe() + ' ' + self.pp1()
+        return self.nbe() + ' ' + self.gerund()
 
     def present_perfect(self):
         reader = csv.reader(open('verb_exceptions.csv'))
@@ -148,3 +155,9 @@ class verb_form(object):
 
     def past_perfect(self):
         return 'had' + ' ' + self.pp2()
+
+    def past_continuous(self):
+        return self.pbe() + ' ' + self.gerund()
+
+    def future_continuous(self):
+        return self.fbe() + ' ' + self.gerund()
