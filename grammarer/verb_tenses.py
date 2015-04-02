@@ -1,4 +1,4 @@
-__author__ = 'masha'
+__author__ = 'ariyatan'
 
 #the class takes a verb ('verb'), required tense ('tense') and person('person').
 #In this case 'tense' means not only  common tenses, but also verb forms such as participle or adverb or gerund.
@@ -74,8 +74,8 @@ class verb_form(object):
         else:
             return self.verb + 'ing'
 
-    #pp2 is 'participle 2', (passive participle)
-    def pp2(self):
+    #ppl is passive participle
+    def ppl(self):
         reader = csv.reader(open('verb_exceptions.csv'))
         verb_exceptions = {}
         for row in reader:
@@ -117,10 +117,10 @@ class verb_form(object):
         if 'she' in self.person:
             return self.verb + "s"
         else:
-            pass
+            return self.verb
 
     def present_continuous(self):
-        return self.nbe() + ' ' + self.gerund()
+        return [self.nbe(), self.gerund()]
 
     def present_perfect(self):
         reader = csv.reader(open('verb_exceptions.csv'))
@@ -129,9 +129,9 @@ class verb_form(object):
             key = row[0]
             verb_exceptions[key] = row[2]
         if self.verb in verb_exceptions.keys():
-            return self.nhave() + ' ' + verb_exceptions[self.verb]
+            return [self.nhave(), verb_exceptions[self.verb]]
         else:
-            return self.nhave() + ' ' + self.pp2()
+            return [self.nhave(), self.ppl()]
 
 
     def past_simple(self):
@@ -148,16 +148,16 @@ class verb_form(object):
             else:
                 return 'were'
         else:
-            return self.pp2()
+            return self.ppl()
 
     def future_simple(self):
-        return self.fbe() + ' ' + self.verb
+        return [self.fbe(), self.verb]
 
     def past_perfect(self):
-        return 'had' + ' ' + self.pp2()
+        return ['had', self.ppl()]
 
     def past_continuous(self):
-        return self.pbe() + ' ' + self.gerund()
+        return [self.pbe(), self.gerund()]
 
     def future_continuous(self):
-        return self.fbe() + ' ' + self.gerund()
+        return [self.fbe(), 'be' + ' ' + self.gerund()]
